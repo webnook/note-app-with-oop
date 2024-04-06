@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Note App With OOP by Webnook</title>
+  </head>
+  <body>
+    <div class="notes" id="app">
+      <div class="notes__sidebar">
+        <div class="notes__logo">NOTE APP</div>
+        <div class="notes__list">
+          <div class="notes__list-item notes__list-item--selected">
+            <div class="notes__small-title">New Note</div>
+            <div class="notes__small-body">this is my first note!</div>
+            <div class="notes__small-updated">Monday 1:30 PM</div>
+          </div>
+        </div>
+        <button class="notes__add">ADD NOTE</button>
+      </div>
+      <div class="notes__preview">
+        <input type="text" class="notes__title" placeholder="عنوان یادداشت ...">
+        <textarea class="notes__body">متن داخل یادداشت...</textarea>
+      </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
