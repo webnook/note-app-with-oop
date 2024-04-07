@@ -124,7 +124,24 @@ body {
 .notes__body {
   flex-grow: 1;
   font-size: 1.2rem;
+  font-weight: 500;
   line-height: 1.5;
   resize: none;
   margin-top: 2rem;
+}
+.notes__item-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    margin-bottom: 10px;
+}
+.note__list-trash{
+  background:var(--main-white);
+  color: var(--main-red);
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }

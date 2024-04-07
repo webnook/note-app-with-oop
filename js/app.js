@@ -1,26 +1,19 @@
-const notes = [
-  {
-    id: 1,
-    title: "first note",
-    body: "this is first note",
-    updated: "2023-04-07T07:19:49.373Z",
-  },
-  {
-    id: 2,
-    title: "second note",
-    body: "this is second note",
-    updated: "2024-02-07T07:19:49.373Z",
-  },
-];
+import getNotesAPI from "./NotesAPI.js";
+import NotesView from "./NotesView.js";
 
-class getNotesAPI {
-  static getAllNotes() {
-    const savedNotes = notes || [];
-    return savedNotes.sort((a, b) => {
-      return new Date(b.updated) - new Date(a.updated);
-    });
-  }
-  saveNote() {}
-  deleteNote() {}
-}
-
+const app = document.getElementById("app");
+const view = new NotesView(app, {
+  onNoteAdd() {
+    console.log("note has been added");
+  },
+  onNoteEdit(newTitle, newBody) {
+    console.log(newTitle, newBody);
+  },
+  onNoteSelect(noteId) {
+    console.log(noteId);
+  },
+  onNoteDelete(noteId) {
+    console.log(noteId);
+  },
+});
+view.updateNoteList(getNotesAPI.getAllNotes());
